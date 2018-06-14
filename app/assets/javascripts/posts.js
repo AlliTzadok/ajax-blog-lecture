@@ -96,16 +96,20 @@ $(function(){
 //     // need the form data
 //
 //     // low level
-    $.ajax({
-      // type: "POST",
-      type: ($("input[name='_method']").val() || this.method),
-      url: this.action,
-      data: $(this).serialize();,
-      dataType: "script"
-    });
+    // $.ajax({
+    //   // type: "POST",
+    //   type: ($("input[name='_method']").val() || this.method),
+    //   url: this.action,
+    //   data: $(this).serialize();
+    //   success: function(response){
+    //     $("#comment_content").val("");
+    //     var $ol = $("div.comments ol")
+    //     $ol.append(response);
+    //   }
+    // });
 //     // send POST request to the correct plae form would've gone to anyway along with the actual form data.
 //
 //
-    e.preventDefault();
-  })
-});
+//     e.preventDefault();
+//   })
+// });
