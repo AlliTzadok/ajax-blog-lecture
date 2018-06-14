@@ -1,8 +1,6 @@
 // Loading Comments via AJAX - Replaced by Remote True
 
-
 $(function(){
-
 
   // $("a.load_comments").on("click", function(e){
     // You just clicked on the Load Comments Link
@@ -86,6 +84,28 @@ $(function(){
       dataType: 'script'
     })
   })
+    e.preventDefault();
+  })
+});
+
+
+// SUBMIT COMMENTS VIA AJAX - SOON TO BE REPLACED BY REMOTE TRUE
+// $(function(){
+//   $("#new_comment").on("submit", function(e){
+//     // need URL to submit the post request too
+//     // need the form data
+//
+//     // low level
+    $.ajax({
+      // type: "POST",
+      type: ($("input[name='_method']").val() || this.method),
+      url: this.action,
+      data: $(this).serialize();,
+      dataType: "script"
+    });
+//     // send POST request to the correct plae form would've gone to anyway along with the actual form data.
+//
+//
     e.preventDefault();
   })
 });
