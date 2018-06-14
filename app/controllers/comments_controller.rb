@@ -5,8 +5,6 @@ class CommentsController < ApplicationController
     @comments = @post.comments
     # It went to implicit rendering
     # render :layout => false
-    # render :json => @comments
-    # render :layout => false
 
     respond_to do |format|
       format.html {render 'index.html', :layout => false}
